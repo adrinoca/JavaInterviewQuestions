@@ -1,3 +1,4 @@
+package Easy;
 import java.util.HashMap;
 
 class Solution {
@@ -30,7 +31,6 @@ class Solution {
             }
 
             sum += currentValue;
-
             prevValue = currentValue;
 
         }
