@@ -1,6 +1,5 @@
 
-
-class ReverseStringAndWords {
+class ReverseString {
     public String reverseString(String sentence) {
         
         // Create a string for the result, a string for the word we construct and a
@@ -9,7 +8,7 @@ class ReverseStringAndWords {
         StringBuilder word = new StringBuilder();        
         boolean firstWord = true;
 
-        for (int i = sentence.length() - 1; i >= 0; i--) {
+        for (int i = 0; i <= sentence.length() - 1; i++) {
             
             if (sentence.charAt(i) == ' ') {
 
@@ -36,9 +35,9 @@ class ReverseStringAndWords {
         }
 
     public static void main(String[] args) {
-        ReverseStringAndWords reverse = new ReverseStringAndWords();
-        System.out.println(reverse.reverseString("Hello World"));           // Output: dlroW olleH
-        System.out.println(reverse.reverseString("I want emos potatOes"));  // Output: I tnaw some seOtatop
-        System.out.println(reverse.reverseString("a good   example"));      // Output: a doog elpmaxe
+        ReverseString reverse = new ReverseString();
+        System.out.println(reverse.reverseString("Hello World"));           // Output: World Hello
+        System.out.println(reverse.reverseString("I want emos potatOes"));  // Output: potatOes emos want I
+        System.out.println(reverse.reverseString("a good   example"));      // Output: example good a
     }
 }
