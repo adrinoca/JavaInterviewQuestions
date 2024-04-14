@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 class Solution {
     public String intToRoman(int num) {
         // Roman numerals components
