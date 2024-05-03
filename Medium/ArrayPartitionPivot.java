@@ -15,20 +15,23 @@ import java.util.List;
 public class ArrayPartitionPivot {
 
     public int[] pivotArray(int[] nums, int pivot) {
-
-        int less = 0; // Finish of the section "lower than pivot"
-        int greater = nums.length - 1; // Finish of the section "greater than pivot"
-        int i = 0; // Explorer of the list
+        int n = nums.length;
+        int less = 0; // índice para los elementos menores al pivote
+        int i = 0;   // índice de escaneo actual
+        int greater = n - 1; // índice para los elementos mayores al pivote
 
         while (i <= greater) {
             if (nums[i] < pivot) {
+                // Coloca el elemento actual en la posición 'less' e incrementa ambos índices 'less' e 'i'
                 swap(nums, i, less);
                 less++;
                 i++;
             } else if (nums[i] > pivot) {
+                // Coloca el elemento actual en la posición 'greater' y decrementa 'greater'
                 swap(nums, i, greater);
                 greater--;
             } else {
+                // Si el elemento es igual al pivote, simplemente incrementa 'i'
                 i++;
             }
         } return nums;
