@@ -72,7 +72,7 @@ public class MinimunNumberDaysMakeBouquet {
                     flowers = 0;
                 }
             } else {
-                flowers = 0; // Reset the counter if the flower did not bloomed
+                flowers = 0; // Reset the counter if the flower did not bloom
             }
         } return bouquets >= m;
     }
@@ -97,3 +97,14 @@ public class MinimunNumberDaysMakeBouquet {
     }
 
 }
+
+// COMPLEXITY
+// TIME
+// First we iterate over the blommDay array to find the max value so O(n).
+// Then we do a binary search while low < high. In the worst case the number os iterations is O(log D) where D is the
+// range between the minimum and the maximum value in bloomDay.
+// In each binary iteration canMakeBouquets is called. This function iterates over bloomDay array so O(n).
+// The total time complexity is <- O(nlog(D)).
+//
+// SPATIAL
+// We don't use additional memory
